@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+<p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<script>
+    var a = 0;
+function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tsah7c9evnal289z5fig/IMG%20Worlds%20of%20Adventure%20Admission%20Ticket%20in%20Dubai%20-%20Klook.jpg"
+ a++;  
+} else if (sw == 1) {
+    pic = "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/v6bwf3e8qhdfhrgq7lv3/IMGWorldsofAdventureTicketinDubai.jpg"
+    a++;    
+}
+  else{
+  pic = "https://mala.ae/wp-content/uploads/2023/02/img.jpg"
+  a++;    
+}
+  document.getElementById('myImage').src = pic;
+  document.getElementById("number").textContent=a;
+}
+</script>
+
+<img id="myImage" src="https://mala.ae/wp-content/uploads/2023/02/img.jpg" width="100" height="180">
+<p id="number"></p>
+<p>
+<button type="button" onclick="light(0)">Light 1</button>
+<button type="button" onclick="light(1)">Light 2</button>
+<button type="button" onclick="light(2)">Light 3</button>
+</p>
+
+</body>
+</html>
+

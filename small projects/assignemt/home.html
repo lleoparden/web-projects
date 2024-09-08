@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+      body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-brand {
+            float: left;
+        }
+
+        nav.main-navigation {
+            position: relative;
+            padding-bottom: 15px;
+            padding-top: 5px;
+        }
+
+        nav.main-navigation ul.nav-list {
+            padding-bottom: 20px;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .nav-list li.nav-list-item {
+            display: inline-block;
+            line-height: 40px;
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+
+        a.nav-link {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            color: #ffffff;
+        }
+        a.nav-link:hover {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            color: #FF730D;
+        }
+
+        @keyframes FadeIn {
+            0% {
+                opacity: 0;
+                -webkit-transition-duration: 0.8s;
+                transition-duration: 0.8s;
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+                pointer-events: auto;
+                transition: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+
+        .nav-list li {
+            animation: FadeIn 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+            animation-fill-mode: both;
+        }
+
+        .nav-list li:nth-child(1) {
+            animation-delay: .3s;
+        }
+
+        .nav-list li:nth-child(2) {
+            animation-delay: .6s;
+        }
+
+        .nav-list li:nth-child(3) {
+            animation-delay: .9s;
+        }
+
+        .nav-list li:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .nav-list li:nth-child(5) {
+            animation-delay: 1.5s;
+        }
+
+        /* Animation */
+
+        @keyframes fadeInUp {
+            from {
+                transform: translate3d(0, 40px, 0)
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                transform: translate3d(0, 40px, 0)
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+                opacity: 1
+            }
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-fill-mode: both
+        }
+
+        .animatedFadeInUp {
+            opacity: 0
+        }
+
+        .fadeInUp {
+            opacity: 0;
+            animation-name: fadeInUp;
+            -webkit-animation-name: fadeInUp;
+        }
+        .call{
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+        .call:hover{
+            background-color: #FF730D;
+            color: white;
+            text-decoration: none;
+        }
+        .contactus{
+            background-color: #262626;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            padding-bottom: 185px;
+        }
+</style>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+    .section {
+        background: url('https://static.wixstatic.com/media/a2f8c5_c5a23dda87f54dd3b5b9dccf90791d71~mv2.jpg/v1/fill/w_2000,h_858,al_c,q_85,enc_auto/a2f8c5_c5a23dda87f54dd3b5b9dccf90791d71~mv2.jpg') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+        text-align: center;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+    .content h1 {
+        font-size: 4em;
+        margin: 0;
+    }
+    .content h2 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+    .btn {
+        background-color: #00acc1;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 300px;
+    }
+    .btn:hover {
+        background-color: #008c9e;
+    }
+</style>
+<style>
+    .full-screen-section {
+        background: url('https://static.wixstatic.com/media/a2f8c5_1940e81de53749b383e52e9ed976ef6a~mv2.jpg/v1/fill/w_583,h_1020,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a2f8c5_1940e81de53749b383e52e9ed976ef6a~mv2.jpg') no-repeat center center/cover;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+        text-align: center;
+        float: right;
+        font-family: Arial, sans-serif;
+        width: 450px;
+        height: 677px;
+    }
+    .background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .content-box {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-box h1 {
+        font-size: 2em;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .social-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 2em;
+    }
+    .social-links a:hover {
+        color: #00acc1;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    .team-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .team-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .team-member-info {
+            padding: 15px;
+        }
+
+        .team-member-info h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .team-member-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+        }
+</style>
+</head>
+<body>
+    <nav class="main-navigation" style="background-color: #262626;">
+        <div class="navbar-header animated fadeInUp">
+            <a href="" class="navbar-brand">
+                <img src="https://cdn.discordapp.com/attachments/1266366410582392853/1266366532733243422/image.png?ex=66a4e33d&is=66a391bd&hm=3546ee6bff4d936a6df29b6976d2ed67ffe9ff9f3b65fbf1cd4cc80e34d0031d&" alt="logo" style="float: left;">
+            </a>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="pricing.html" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="testimonials.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="personaltrainers.html" class="nav-link">About us</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="http://localhost/ecommerce/loginpage.php" class="nav-link">Log in</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="http://localhost/ecommerce/contact.php" class="nav-link">Contact us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="section">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>SEMI-PRIVATE</h1>
+            <h2>TRAINING</h2>
+            <button class="btn">REGISTER</button>
+        </div>
+    </div>
+
+
+<div style="margin: 7%;">
+    <center>
+        <img src="https://cdn.discordapp.com/attachments/1266366410582392853/1266418568795394098/image.png?ex=66a513b3&is=66a3c233&hm=5d4d4df86688b16847e7779dc7c6a0229e8b60ccc1a9758d40daaf1d0bb12ab3&" alt="image" style="float: left;">
+        <img src="https://cdn.discordapp.com/attachments/1266366410582392853/1266418616245424209/image.png?ex=66a513bf&is=66a3c23f&hm=0203115ff6e4754df0c7c244fb03fc1eb9f5c51a259f866951b301466879918d&">
+        <p style="color: rgb(163, 163, 162);">„THE BEST OF BOTH WORLDS. A PERSONAL TRAINING<br>
+            EXPERIENCE IN A GROUP SETTING. IN OUR SMALL GROUP<br>
+            CLASS, WE ONLY ALLOW 3-6 PEOPLE PER SESSION. WE<br>
+            BELIEVE THIS IS THE MOST EFFECTIVE SETTING FOR YOU TO<br>
+            SUCCEED. YOU GET TO ENJOY THE FUN ENERGY OF A GROUP<br>
+            AND WE CAN OFFER TOP NOTCH COACHING WITH SUCH A<br>
+            SMALL NUMBER OF PEOPLE.“</p>
+        <p>– ANDRIUS ČESNAUSKAS –</p>
+    </center>
+</div>
+
+    <img  style="width: 100%; height: auto;" src="https://cdn.discordapp.com/attachments/1266366410582392853/1266419867527942306/image.png?ex=66a514e9&is=66a3c369&hm=e98cc5ba39e8a483cb1c7ebfae07898b20769679d4c73628e1ae965a85951ef1&">
+
+
+    <div>
+        <div class="full-screen-section">
+            <div class="background-overlay"></div>
+            <div class="content-box">
+                <h1>JOIN US</h1>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <center>
+        <h1 style="margin-right: 0%; font-size: 60px;"><b>SEMI-PRIVATE TRAINING</b></h1>
+        <i><p style="color: rgb(163, 163, 162);">2 in 1: PERSONAL TRAINING EXPERIENCE IN A SMALL GROUP FORMAT. WORKOUTS MADE FOR<br>
+            GROUPS OF 3-5 PERSONS. WE GUARANTEE YOU, IT'S THE BEST WAY TO GET THE RESULTS YOU<br>
+            ALWAYS WANTED. ENJOY HIGH QUALITY TRAINING IN SMALL GROUP ATMOSPHERE!"</p></i>
+        </center><br><br>
+        <img style="margin-left:auto ; max-width:  1000px;" src="https://cdn.discordapp.com/attachments/1266366410582392853/1266424503731490899/image.png?ex=66a5193a&is=66a3c7ba&hm=8edcc1ec88bdfd6ab34916405e10e264d9ab66e3b2f191c5f798e1b9b8a75a21&">
+    </div>
+
+<br><br><br><br><br>
+
+    <section class="team-section">
+        <h1 class="team-title">OUR TEAM</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="https://static.wixstatic.com/media/ad1133_57a9586faa0d44cd8dd3456ff2750889~mv2.jpg/v1/fill/w_439,h_396,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ad1133_57a9586faa0d44cd8dd3456ff2750889~mv2.jpg" alt="Andrius Cesnauskas">
+                <div class="team-member-info">
+                    <h3>Andrius Cesnauskas</h3>
+                    <p>Head Coach</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://static.wixstatic.com/media/ad1133_04f55bd50ab64bdd8a1912dd9ea8d270~mv2.jpg/v1/fill/w_435,h_396,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ad1133_04f55bd50ab64bdd8a1912dd9ea8d270~mv2.jpg" alt="Vladislav Esaulov">
+                <div class="team-member-info">
+                    <h3>Vladislav Esaulov</h3>
+                    <p>Movement Coach</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://static.wixstatic.com/media/ad1133_15ee446a24f9424685035cb2fd6284c5~mv2.jpg/v1/fill/w_435,h_396,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ad1133_15ee446a24f9424685035cb2fd6284c5~mv2.jpg" alt="Gediminas Vengrauskas">
+                <div class="team-member-info">
+                    <h3>Gediminas Vengrauskas</h3>
+                    <p>Movement Coach</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="https://static.wixstatic.com/media/ad1133_0640c5b3bf854d0ca5e807906abb55ea~mv2.png/v1/fill/w_435,h_396,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ad1133_0640c5b3bf854d0ca5e807906abb55ea~mv2.png" alt="Rojus Adomaitis">
+                <div class="team-member-info">
+                    <h3>Rojus Adomaitis</h3>
+                    <p>Movement Coach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="contactus">
+        <iframe style="float: left; margin-left: 500px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1443325.1558141676!2d24.359130801725907!3d53.549156940255216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd946e39117309%3A0x4060263dc3e35295!2sVytenio%20g.%2051%2C%20Vilnius%2C%2003209%20Vilniaus%20m.%20sav.%2C%20Lithuania!5e0!3m2!1sen!2seg!4v1722001884938!5m2!1sen!2seg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2>contact us</h2>
+    <p>Vytenio g. 51, Vilnius<br>
+        info@movementlab.lt<br>
+        +37064444432</p>
+    </div>
+</body>
+</html>

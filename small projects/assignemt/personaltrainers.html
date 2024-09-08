@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>personal trainers</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+      body {
+            margin: 0;
+            padding: 0;
+            background-color: #8c8c8c;
+        }
+
+        .navbar-brand {
+            float: left;
+        }
+
+        nav.main-navigation {
+            position: relative;
+            padding-bottom: 15px;
+            padding-top: 5px;
+        }
+
+        nav.main-navigation ul.nav-list {
+            padding-bottom: 20px;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .nav-list li.nav-list-item {
+            display: inline-block;
+            line-height: 40px;
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+
+        a.nav-link {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            color: #ffffff;
+        }
+        a.nav-link:hover {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            color: #FF730D;
+        }
+
+        @keyframes FadeIn {
+            0% {
+                opacity: 0;
+                -webkit-transition-duration: 0.8s;
+                transition-duration: 0.8s;
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+                pointer-events: auto;
+                transition: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+
+        .nav-list li {
+            animation: FadeIn 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+            animation-fill-mode: both;
+        }
+
+        .nav-list li:nth-child(1) {
+            animation-delay: .3s;
+        }
+
+        .nav-list li:nth-child(2) {
+            animation-delay: .6s;
+        }
+
+        .nav-list li:nth-child(3) {
+            animation-delay: .9s;
+        }
+
+        .nav-list li:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .nav-list li:nth-child(5) {
+            animation-delay: 1.5s;
+        }
+
+        /* Animation */
+
+        @keyframes fadeInUp {
+            from {
+                transform: translate3d(0, 40px, 0)
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                transform: translate3d(0, 40px, 0)
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+                opacity: 1
+            }
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-fill-mode: both
+        }
+
+        .animatedFadeInUp {
+            opacity: 0
+        }
+
+        .fadeInUp {
+            opacity: 0;
+            animation-name: fadeInUp;
+            -webkit-animation-name: fadeInUp;
+        }
+        .call{
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+        .call:hover{
+            background-color: #FF730D;
+            color: white;
+            text-decoration: none;
+        }
+        .contactus{
+            background-color: #262626;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            padding-bottom: 185px;
+            position: relative;
+            bottom: 0;
+        }
+</style>
+<style>
+    .profile-container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+        .profile-image {
+            flex: 0 0 200px;
+        }
+        .profile-details {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .profile-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .profile-contact {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .profile-contact p {
+            margin: 0;
+        }
+        .profile-contact a {
+            text-decoration: none;
+            color: inherit;
+            margin-right: 10px;
+        }
+        .profile-social-icons {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .profile-social-icons a {
+            text-decoration: none;
+            color: #000;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .profile-social-icons a:hover {
+            color: #007bff;
+        }
+        .more-button {
+            margin-left: auto;
+        }
+        .more-button a {
+            display: inline-block;
+            background-color: #20c997;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .more-button a:hover {
+            background-color: #198754;
+        }
+</style>
+</head>
+<body>
+    <nav class="main-navigation" style="background-color: #262626;">
+        <div class="navbar-header animated fadeInUp">
+            <a href="home.html" class="navbar-brand">
+                <img src="https://cdn.discordapp.com/attachments/1266366410582392853/1266366532733243422/image.png?ex=66a4e33d&is=66a391bd&hm=3546ee6bff4d936a6df29b6976d2ed67ffe9ff9f3b65fbf1cd4cc80e34d0031d&" alt="logo" style="float: left;">
+            </a>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="pricing.html" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="testimonials.html" class="nav-link">Products</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="personaltrainers.html" class="nav-link">About us</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="http://localhost/ecommerce/loginpage.php" class="nav-link">Log in</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="http://localhost/ecommerce/contact.php" class="nav-link">Contact us</a>
+            </li>
+        </ul>
+    </nav>
+    <b><h1 style="font-size: 70px; text-align: center;">PERSONAL TRAINERS</h1></b>
+
+
+
+
+
+
+
+ <div class="profile-container">
+        <div class="profile-image">
+            <img src="https://static.wixstatic.com/media/ad1133_15ee446a24f9424685035cb2fd6284c5~mv2.jpg/v1/crop/x_200,y_0,w_965,h_1365/fill/w_299,h_423,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Gediminas%20Vengrauskas.jpg" alt="Andrius Cesnauskas">
+        </div>
+        <div class="profile-details">
+            <h2>Personal Trainer</h2>
+            <h1>ANDRIUS ČESNAUSKAS</h1>
+            <p>HEAD COACH | FITNESS | NUTRITION | S&C | LIFE STYLE</p>
+            
+            <div class="profile-contact" >
+                <p>+37064444432</p>
+                <br>
+                <a href="mailto:andrius@movementlab.lt">andrius@movementlab.lt</a>
+                <div class="profile-social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="more-button">
+                    <a href="#">MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="profile-container">
+        <div class="profile-image">
+            <img src="https://static.wixstatic.com/media/ad1133_04f55bd50ab64bdd8a1912dd9ea8d270~mv2.jpg/v1/crop/x_155,y_0,w_746,h_1055/fill/w_299,h_423,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Vladislava%20Esaulov.jpg" alt="Andrius Cesnauskas">
+        </div>
+        <div class="profile-details">
+            <h2>Personal Trainer</h2>
+            <h1>GEDIMINAS VENGRAUSKAS</h1>
+            <p>MOVEMENT COACH | FITNESS | S&C | PARKOUR</p>
+            
+            <div class="profile-contact" >
+                <p>+37067080090</p>
+                <br>
+                <a href="mailto:gediminas@movementlab.lt">gediminas@movementlab.lt</a>
+                <div class="profile-social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="more-button">
+                    <a href="#">MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="profile-container">
+        <div class="profile-image">
+            <img src=https://static.wixstatic.com/media/ad1133_0640c5b3bf854d0ca5e807906abb55ea~mv2.png/v1/crop/x_240,y_0,w_1159,h_1639/fill/w_299,h_423,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Rojus%20adomaitis.png" alt="Andrius Cesnauskas">
+        </div>
+        <div class="profile-details">
+            <h2>Personal Trainer</h2>
+            <h1>ROJUS ADOMAITIS</h1>
+            <p>MOVEMENT COACH | FITNESS | S&C | BICYCLES PERFORMANCE</p>
+            
+            <div class="profile-contact" >
+                <p>+37064647446</p>
+                <br>
+                <a href="mailto:andrius@movementlab.lt">rojus@movementlab.lt</a>
+                <div class="profile-social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="more-button">
+                    <a href="#">MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="profile-container">
+        <div class="profile-image">
+            <img src="https://static.wixstatic.com/media/ad1133_57a9586faa0d44cd8dd3456ff2750889~mv2.jpg/v1/crop/x_146,y_0,w_707,h_1000/fill/w_299,h_423,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/andrius_cesnauskas_edited.jpg" alt="Andrius Cesnauskas">
+        </div>
+        <div class="profile-details">
+            <h2>Personal Trainer</h2>
+            <h1>ANDRIUS ČESNAUSKAS</h1>
+            <p>HEAD COACH | FITNESS | NUTRITION | S&C | LIFE STYLE</p>
+            
+            <div class="profile-contact" >
+                <p>+37064444432</p>
+                <br>
+                <a href="mailto:andrius@movementlab.lt">andrius@movementlab.lt</a>
+                <div class="profile-social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="more-button">
+                    <a href="#">MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+
+
+
+
+
+    <div class="contactus">
+        <iframe style="float: left; margin-left: 500px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1443325.1558141676!2d24.359130801725907!3d53.549156940255216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd946e39117309%3A0x4060263dc3e35295!2sVytenio%20g.%2051%2C%20Vilnius%2C%2003209%20Vilniaus%20m.%20sav.%2C%20Lithuania!5e0!3m2!1sen!2seg!4v1722001884938!5m2!1sen!2seg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2>contact us</h2>
+    <p>Vytenio g. 51, Vilnius<br>
+        info@movementlab.lt<br>
+        +37064444432</p>
+    </div>
+</body>
+</html>
